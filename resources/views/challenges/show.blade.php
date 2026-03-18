@@ -8,6 +8,7 @@
 <hr>
 
 <p>{{ $challenge->description }}</p>
-
-<a href="{{ route('challenges.edit', $challenge->id) }}">Edit</a>
+@auth
+  <a href="{{ route('challenges.edit', $challenge->id) }}">Edit</a>
+@endauth
 <a href="{{ route('challenges.index') }}">Back to Challenges</a>

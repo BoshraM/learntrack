@@ -21,7 +21,13 @@ Route::middleware('auth')->group(function () {
 
 require __DIR__.'/auth.php';
 
+
+
+
 Route::middleware('auth')->group(function () {
-    Route::resource('categories', CategoryController::class);
-    Route::resource('challenges', ChallengeController::class);
+    Route::resource('categories', CategoryController::class)->except(['index', 'show']);
+    Route::resource('challenges', ChallengeController::class)->except(['index', 'show']);
 });
+
+Route::resource('categories', CategoryController::class)->only(['index', 'show']);
+Route::resource('challenges', ChallengeController::class)->only(['index', 'show']);

@@ -1,6 +1,8 @@
 <h1>Categories</h1>
 
-<a href="{{ route('categories.create') }}">Create New Category</a>
+@auth
+    <a href="{{ route('categories.create') }}">Create New Category</a>
+@endauth
 
 <hr>
 
@@ -10,13 +12,15 @@
         <p>{{ $category->description }}</p>
 
         <a href="{{ route('categories.show', $category->id) }}">View</a>
-        <a href="{{ route('categories.edit', $category->id) }}">Edit</a>
+        @auth
+            <a href="{{ route('categories.edit', $category->id) }}">Edit</a>
 
-        <form method="POST" action="{{ route('categories.destroy', $category->id) }}" style="display:inline;">
-            @csrf
-            @method('DELETE')
-            <button type="submit">Delete</button>
-        </form>
+            <form method="POST" action="{{ route('categories.destroy', $category->id) }}" style="display:inline;">
+                @csrf
+                @method('DELETE')
+                <button type="submit">Delete</button>
+            </form>
+        @endauth
 
         <hr>
     </div>

@@ -1,6 +1,7 @@
 <h1>Challenges</h1>
-
-<a href="{{ route('challenges.create') }}">Create New Challenge</a>
+@auth
+  <a href="{{ route('challenges.create') }}">Create New Challenge</a>
+@endauth
 
 <hr>
 
@@ -13,13 +14,15 @@
         <p><strong>Estimated time:</strong> {{ $challenge->estimated_minutes ?? 'N/A' }} mins</p>
 
         <a href="{{ route('challenges.show', $challenge->id) }}">View</a>
-        <a href="{{ route('challenges.edit', $challenge->id) }}">Edit</a>
+        @auth
+          <a href="{{ route('challenges.edit', $challenge->id) }}">Edit</a>
 
-        <form method="POST" action="{{ route('challenges.destroy', $challenge->id) }}" style="display:inline;">
-            @csrf
-            @method('DELETE')
-            <button type="submit">Delete</button>
-        </form>
+          <form method="POST" action="{{ route('challenges.destroy', $challenge->id) }}" style="display:inline;">
+              @csrf
+              @method('DELETE')
+              <button type="submit">Delete</button>
+          </form>
+        @endauth
 
         <hr>
     </div>
