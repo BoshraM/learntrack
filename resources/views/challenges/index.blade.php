@@ -1,3 +1,4 @@
+<x-app-layout>
 <h1>Challenges</h1>
 @auth
   <a href="{{ route('challenges.create') }}">Create New Challenge</a>
@@ -31,3 +32,4 @@
 @endforelse
 
 {{ $challenges->links() }}
+</x-app-layout>

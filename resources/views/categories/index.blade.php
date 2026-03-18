@@ -1,3 +1,4 @@
+<x-app-layout>
 <h1>Categories</h1>
 
 @auth
@@ -29,3 +30,4 @@
 @endforelse
 
 {{ $categories->links() }}
+</x-app-layout>
