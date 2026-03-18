@@ -3,6 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\ChallengeController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -22,4 +23,5 @@ require __DIR__.'/auth.php';
 
 Route::middleware('auth')->group(function () {
     Route::resource('categories', CategoryController::class);
+    Route::resource('challenges', ChallengeController::class);
 });
