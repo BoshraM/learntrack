@@ -86,17 +86,16 @@
                     <h2 class="text-xl sm:text-2xl font-semibold mb-4 text-center">About This Project</h2>
 
                     <p class="text-gray-600 dark:text-gray-400 text-center max-w-3xl mx-auto leading-7 text-sm sm:text-base">
-                        I built LearnTrack as a Laravel portfolio project to demonstrate practical skills in authentication,
-                        CRUD operations, database relationships, and user progress tracking. It reflects my interest in
-                        educational digital products and was developed through hands-on practice, documentation, and
-                        AI-assisted learning.
+                        LearnTrack is a Laravel project I built as part of a recent job application to demonstrate my skills in PHP, Laravel (authentication, CRUD operations, and database relationships), and Tailwind CSS.
+                        The project was developed through hands-on practice, using documentation and AI-assisted support as part of my learning process.
+                        At the moment, any logged-in user has admin-level access for managing content. This will be refined in a future update so that only admins can create and manage challenges, while regular users can focus on completing and tracking them.
                     </p>
                 </div>
             </div>
 
             <!-- Footer note -->
             <div class="text-center text-sm text-gray-500 dark:text-gray-400">
-                Built with Laravel • Portfolio Project
+                Built with Laravel • Created by Boshra Mahmoudi
             </div>
 
         </div>
