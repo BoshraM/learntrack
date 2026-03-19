@@ -12,10 +12,6 @@
                     {{ $category->name }}
                 </h1>
 
-                <p class="text-sm text-gray-500 dark:text-gray-400 mb-4">
-                    <span class="font-semibold">Slug:</span> {{ $category->slug }}
-                </p>
-
                 <div class="text-gray-700 dark:text-gray-300 leading-7 mb-6">
                     {{ $category->description ?: 'No description provided.' }}
                 </div>
